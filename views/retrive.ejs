@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrive Data</title>
+    <link rel="stylesheet" href="/css/ritrive.css">
+</head>
+<body>
+    <div class="countuner">
+        <div class="header">
+            <h2>All user data </h2>
+        </div>
+        <div class="user">
+            <button ><a href="create">Create User >></a></button>
+        </div>
+        <div class="box">
+            
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                    <Th>Acctivets</Th>
+                </tr>
+                <% for(let i=0; i < Users.length; i++){ %>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= Users[i].fname %></td>
+                    <td><%= Users[i].lname %></td>
+                    <td><%= Users[i].age %></td>
+                    <td><%= Users[i].email %></td>
+                    <td><%= Users[i].gendar %></td>
+                    <td><%= Users[i].status %></td>
+                    <td class="btx">
+                        <a href="update?id=<%= Users[i]._id %>" class="edit">Edit</a>
+                        
+                        <button id="<%- Users[i]._id%>"  class="delete" >Delete</button></td>
+                </tr>
+                <div class="in">
+                    <!-- <script>
+                        var nth=<%- i %>;
+                        var ID= <%- JSON.stringify( Users[i]._id) %>;
+                    </script> -->
+                </div>
+                    
+                
+                    <%}%>
+                
+                
+            </table>
+            
+        </div>
+    </div>
+    
+    <script src="/js/delete.js"></script>
+</body>
+</html>

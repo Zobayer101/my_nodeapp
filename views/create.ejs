@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new users</title>
+    <link rel="stylesheet" href="/css/create.css">
+</head>
+<body>
+    <div class="countner">
+        <div class="hader">
+            <h2>
+                Data insert
+            </h2>
+        </div>
+        <div class="home">
+            <a href="retrive">Show Data</a>
+        </div>
+        <div class="form">
+            <form action="/route/api/save" method="POST">
+                
+                <input type="text" name="fname" placeholder="First name" required>
+                <br>
+                
+                <input type="text" name="lname" placeholder="Last name" required>
+                <br>
+                <input type="date" name="age" placeholder="Date-of-barth" required>
+                <br>
+                 <input type="email" name="email" placeholder="Email"required>
+                <br>
+                
+                <input type="password" name="password" placeholder="password"required>
+                <br>
+                <label for="Male">Male</label>
+                <input type="radio" name="gendar"  value="male">
+                
+                <label for="Female">Female</label>
+                <input type="radio" name="gendar"  value="female">
+                <br><br>
+                <label for="active">Active</label>
+                <input type="radio" name="status"  value="active">
+                
+                <label for="inactive">Inactive</label>
+                <input type="radio" name="status"  value="inactive">
+                <br>
+                <input type="submit" name="submit" value="submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

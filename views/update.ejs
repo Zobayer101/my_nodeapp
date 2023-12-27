@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update a  users</title>
+    <link rel="stylesheet" href="/css/update.css">
+</head>
+<body>
+    <div class="countner">
+        <div class="hader">
+            <h2>
+                Data Update
+            </h2>
+        </div>
+        <div class="home">
+            <a href="retrive">Show Data</a>
+        </div>
+        <div class="home2"> 
+            <a href="home">Home</a>
+        </div>
+        <h2></h2>
+        <div class="form">
+            <form   id="form" >
+                 
+                <input type="text" name="fname" value="<%= Users && Users.fname %>" placeholder="First name" >
+                <br> 
+                
+                <input type="text"  name="lname" value="<%= Users && Users.lname %>" placeholder="Last name" >
+                <br>
+                <input type="date" name="age" value="<%= Users && Users.age %>" placeholder="Date-of-barth" >
+                <br>
+                 <input type="email"  name="email" value="<%= Users && Users.email %>" placeholder="Email">
+                <br>
+                
+                
+                <label for="Male">Male</label>
+                <input type="radio" name="gendar" id="male"  value="male" <%= Users && Users.gendar == 'male'? 'checked':'' %> >
+                
+                <label for="Female">Female</label>
+                <input type="radio"  name="gendar" id="female"  value="female" <%= Users && Users.gendar == 'female' ? 'checked': '' %> >
+                <br><br>
+                <label for="active">Active</label>
+                <input type="radio" name="status"   value="active" <%= Users && Users.status == 'active' ? 'checked': '' %> >
+                
+                <label for="inactive">Inactive</label>
+                <input type="radio"  name="status"   value="inactive" <%= Users && Users.status == 'inactive' ? 'checked' : '' %> >
+                <br>
+                <input type="submit" name="submit"  value="Update">
+            </form>
+        </div>
+
+    </div>
+    <script>
+        var ID= <%- JSON.stringify( Users && Users._id) %>;
+    </script>
+    
+    <script src="/js/update.js">  </script>
+</body>
+</html>
